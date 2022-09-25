@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section>
+        <div>
+            <p id="contraseñaGenerada"></p>
+            <!-- <input class="input_contrasenaGenerada" type="text"> -->
+            <span class="icon">
+                <i class="fa-regular fa-copy" class="copiar"></i>
+                <i class="fa-solid fa-arrow-rotate-right" class="recargar"></i>
+            </span>
+        </div>
+        <div class="div_contenedor">
+            <h1>
+                Personalice su contraseña
+            </h1>
+            <div class="div_contenedor_b">
+                <div class="div_longitud">
+                    <h2> Longitud </h2>
+                    <input type="radio" value="12" name="longitud" class="longitud" >
+                    <label>12 carácteres</label>
+                    <input type="radio" value="9" name="longitud" class="longitud">
+                    <label>9 carácteres</label>
+                    <input type="radio" value="6" name="longitud" class="longitud">
+                    <label>6 carácteres</label>
+                </div>
+                <div class="div_reglas">
+                    <h2> Reglas</h2>
+                    <input type="radio" name="reglas" class="inputReglas" id="letras">
+                    <label>Sólo letras</label>
+                    <input type="radio" name="reglas" id="numeros" class="inputReglas">
+                    <label>Sólo números</label>
+                    <input type="radio" name="reglas" id="caracteres" class="inputReglas">
+                    <label>Todos los caracteres</label>
+                </div>
+                <div class="div_caracteres">
+                    <h2>Caracteres</h2>
+                    <input type="checkbox" id="checkbox-mayusculas">
+                    <label>Mayúsculas</label>
+                    <input type="checkbox" id="checkbox-minusculas">
+                    <label>Minúsculas</label>
+                    <input type="checkbox" id="checkbox-numeros" >
+                    <label>Números</label>
+                    <input type="checkbox" id="checkbox-simbolos">
+                    <label>Símbolos</label>
+                    
+                </div>
+            </div>
+        
+            <button id="boton">Generar contraseña</button>
+            
+            <!-- <button id="boton" onclick="validarLongitud();">Generar contraseña</button> -->
+        </div>
+    </section>
+    <script src="script/script.js"></script>
+</body>
+</html>

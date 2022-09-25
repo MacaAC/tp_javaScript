@@ -1,0 +1,62 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(214, 86, 214);
+    text-align: center;
+}
+
+#contraseñaGenerada{
+    height: 40px;
+    width: 250px;
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid  rgb(214, 86, 214);
+}
+.div_contenedor{
+    background-color: plum;
+    height: 400px;
+    width: 500px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    background-color: rgb(214, 86, 214);
+    border-radius:20px;
+    height: 40px;
+    width: 350px;
+    color: white;
+    text-align: center;
+}
+h2{
+    color: white;
+}
+.div_contenedor_b{
+    display: flex;
+    justify-content: space-around;
+}
+.div_longitud,.div_reglas,.div_caracteres{
+    
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+    
+}
+button{
+    background-color: rebeccapurple;
+    color: white;
+    border-radius: 20px;
+    height: 30px;
+    width: 200px;
+    border: none;
+    margin-top: 20px;
+}
+.fa-solid{
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border: 2px solid black;
+}
