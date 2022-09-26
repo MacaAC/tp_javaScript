@@ -4,20 +4,16 @@ const $ = (selector) => document.querySelector(selector)
 let inputsLongitud = $$(".longitud")//nodeList
 let boton = $("#boton");
 //let inputChequeado = false
-let valorLongitud = 0
+let valorLongitud = 6
 
 
 for (const input of inputsLongitud) {
      input.addEventListener("click",()=>{
         if(input.checked){
             valorLongitud = parseInt(input.value)
-           // inputChequeado = true
         }
      })
 }
-//if (inputChequeado===false){
-    //alert("Debe seleccionar la longitud de la contraseña")
-//}
 
 
 //r3glas
@@ -42,29 +38,26 @@ function validarReglas() {
         checkboxSimbolos.setAttribute("disabled", "true")
     }
     else if (radioBtnNumeros.checked) {
-        checkboxNumeros.removeAttribute("disabled")
-        checkboxSimbolos.removeAttribute("checked")
-        checkboxSimbolos.checked = false
-        checkboxMayusculas.setAttribute("disabled", "true")
+        checkboxNumeros.disabled=false
+        checkboxSimbolos.checked=false
+        checkboxSimbolos.disabled = true
+        checkboxMayusculas.disabled=true
         checkboxMayusculas.checked = false
-        checkboxMinusculas.setAttribute("disabled", "true")
+        checkboxMinusculas.disabled=true
         checkboxMinusculas.checked = false
         checkboxNumeros.checked= true
 
     }
 
     else if (caracteres.checked) {
-        checkboxNumeros.removeAttribute("disabled")
-        checkboxMayusculas.removeAttribute("disabled")
-        checkboxMinusculas.removeAttribute("disabled")
-        checkboxSimbolos.removeAttribute("disabled")
+        checkboxNumeros.disabled=false
+        checkboxMayusculas.disabled=false
+        checkboxMinusculas.disabled=false
+        checkboxSimbolos.disabled=false     
         checkboxMinusculas.checked = true
         checkboxSimbolos.checked = true
         checkboxMayusculas.checked = true
         checkboxNumeros.checked = true
-    }
-    else {
-        //si no marca nada, pero no sé donde poner el evento en ese caso, por ejemplo, para que si no marque nada, se marquen todos los caracteres, o para que salte un alert pidiendo que marque algo.
     }
 }
 
@@ -74,6 +67,7 @@ for (const input of inputsReglas){
     input.addEventListener("click", validarReglas)
 }
 
+validarReglas()
 
 //generacion de clave
 
@@ -84,6 +78,7 @@ let simbolos = "!#$%&/()=,?¡"
 let todo = []
 
 const pushearMayusculas =()=>{
+   
     if (checkboxMayusculas.checked){
         todo.push(mayusculas )
         console.log(todo)
@@ -128,6 +123,8 @@ const pushearMinusculas =() =>{
 
      }
      }
+     pushearMayusculas()
+     pushearMinusculas()
 
 
 checkboxMayusculas.addEventListener("click", pushearMayusculas)
@@ -144,7 +141,7 @@ caracteres.addEventListener("click",pushearNumeros)
 
 
 contraseñaGenerada  = $("#contraseñaGenerada")
-console.log(contraseñaGenerada)
+
 
 const generarContraseña=(longitudSeleccionada)=> {
     
@@ -158,14 +155,12 @@ const generarContraseña=(longitudSeleccionada)=> {
             contraseñaGenerada.innerHTML = `${contraseña}`    
             return contraseña
         }  
-        else{
-            alert("Seleccione un valor para longitud")
-        }
+        // else{
+        //     alert("Seleccione un valor para longitud")
+        // } quería hacer una validacion más copada pero terminé poniendo valores por default y esto que me llevó años ya no sirve =(
     }
+    
 
-    const prueba =()=>{
-        alert("hola")
-    }
 
 boton.addEventListener("click", ()=>generarContraseña(valorLongitud))
 

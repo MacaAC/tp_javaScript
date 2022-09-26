@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&family=Roboto+Condensed&family=Roboto:wght@300&display=swap" rel="stylesheet"> -->
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -11,12 +14,20 @@
 <body>
     <section>
         <div>
-            <p id="contraseñaGenerada"></p>
+            <div class="contenedorContraseña">
+                <p id="contraseñaGenerada"> </p>
+                    <div class="icon">
+                        <i class="fa-regular fa-copy" class="copiar"></i>
+                        <i class="fa-solid fa-arrow-rotate-right" class="recargar"></i>
+                    </div>
+            </div>
+            
+           
             <!-- <input class="input_contrasenaGenerada" type="text"> -->
-            <span class="icon">
+            <!-- <span class="icon">
                 <i class="fa-regular fa-copy" class="copiar"></i>
                 <i class="fa-solid fa-arrow-rotate-right" class="recargar"></i>
-            </span>
+            </span> -->
         </div>
         <div class="div_contenedor">
             <h1>
@@ -25,18 +36,18 @@
             <div class="div_contenedor_b">
                 <div class="div_longitud">
                     <h2> Longitud </h2>
-                    <input type="radio" value="12" name="longitud" class="longitud" >
-                    <label>12 carácteres</label>
+                    <input type="radio" value="6" name="longitud" class="longitud" checked>
+                    <label>6 carácteres</label>
                     <input type="radio" value="9" name="longitud" class="longitud">
                     <label>9 carácteres</label>
-                    <input type="radio" value="6" name="longitud" class="longitud">
-                    <label>6 carácteres</label>
+                    <input type="radio" value="12" name="longitud" class="longitud" >
+                    <label>12 carácteres</label>
                 </div>
                 <div class="div_reglas">
                     <h2> Reglas</h2>
-                    <input type="radio" name="reglas" class="inputReglas" id="letras">
+                    <input type="radio" name="reglas" class="inputReglas" id="letras" checked>
                     <label>Sólo letras</label>
-                    <input type="radio" name="reglas" id="numeros" class="inputReglas">
+                    <input type="radio" name="reglas" id="numeros" class="inputReglas" >
                     <label>Sólo números</label>
                     <input type="radio" name="reglas" id="caracteres" class="inputReglas">
                     <label>Todos los caracteres</label>
@@ -57,7 +68,6 @@
         
             <button id="boton">Generar contraseña</button>
             
-            <!-- <button id="boton" onclick="validarLongitud();">Generar contraseña</button> -->
         </div>
     </section>
     <script src="script/script.js"></script>
