@@ -1,6 +1,8 @@
 const $$ = (selector) => document.querySelectorAll(selector)
 const $ = (selector) => document.querySelector(selector)
 
+let todo = []
+
 let inputsLongitud = $$(".longitud")//nodeList
 let boton = $("#boton");
 //let inputChequeado = false
@@ -28,6 +30,7 @@ let checkboxSimbolos = $("#checkbox-simbolos")
 
 function validarReglas() {
     if (letras.checked) {
+        todo = []
         checkboxMayusculas.disabled = false
         checkboxMinusculas.disabled = false
         checkboxMayusculas.checked= true
@@ -38,6 +41,7 @@ function validarReglas() {
         checkboxSimbolos.setAttribute("disabled", "true")
     }
     else if (radioBtnNumeros.checked) {
+        todo = []
         checkboxNumeros.disabled=false
         checkboxSimbolos.checked=false
         checkboxSimbolos.disabled = true
@@ -50,6 +54,7 @@ function validarReglas() {
     }
 
     else if (caracteres.checked) {
+        todo = []
         checkboxNumeros.disabled=false
         checkboxMayusculas.disabled=false
         checkboxMinusculas.disabled=false
@@ -75,7 +80,6 @@ let mayusculas = "ABCDEFGHIJKLLMNOPQRSTUVWXYZ"
 let minusculas = "abcdefghijklmnopqrstuvwxyz"
 let numeros = "0123456789"
 let simbolos = "!#$%&/()=,?¡"
-let todo = []
 
 const pushearMayusculas =()=>{
    
@@ -83,8 +87,8 @@ const pushearMayusculas =()=>{
         todo.push(mayusculas )
         console.log(todo)
     }
-     else if(checkboxMayusculas.checked === false){
-            todo.splice(todo.indexOf(mayusculas),1)
+     else{
+        todo.splice(todo.indexOf(mayusculas),1)
         console.log(todo)
 
      }
@@ -94,7 +98,7 @@ const pushearMinusculas =() =>{
         todo.push(minusculas) 
         console.log(todo)
     }
-     else if (checkboxMinusculas.checked === false){
+     else{
         todo.splice(todo.indexOf(minusculas),1)
         console.log(todo)
 
@@ -105,7 +109,7 @@ const pushearMinusculas =() =>{
         todo.push(numeros) 
         console.log(todo)
     }
-     else if (checkboxNumeros.checked === false){
+     else{
         todo.splice(todo.indexOf(numeros),1)
         console.log(todo)
 
@@ -117,7 +121,7 @@ const pushearMinusculas =() =>{
         todo.push(simbolos) 
         console.log(todo)
     }
-     else if (checkboxSimbolos.checked === false){
+     else {
         todo.splice(todo.indexOf(simbolos),1)
         console.log(todo)
 
@@ -145,7 +149,7 @@ contraseñaGenerada  = $("#contraseñaGenerada")
 
 const generarContraseña=(longitudSeleccionada)=> {
     
-        if (longitudSeleccionada != 0){
+        if (checkboxMayusculas.checked||checkboxMinusculas.checked||checkboxNumeros.checked||checkboxSimbolos.checked){ //si esta chequeado este o este o este.. usar or
             let contraseña = ""
             for (i = 0; i < longitudSeleccionada; i++) {
                 todoString = todo.join("")
@@ -155,10 +159,10 @@ const generarContraseña=(longitudSeleccionada)=> {
             contraseñaGenerada.innerHTML = `${contraseña}`    
             return contraseña
         }  
-        // else{
-        //     alert("Seleccione un valor para longitud")
-        // } quería hacer una validacion más copada pero terminé poniendo valores por default y esto que me llevó años ya no sirve =(
-    }
+        else{
+            alert("Seleccione al menos un caracter")
+         } 
+        }
     
 
 
