@@ -1,61 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&family=Roboto+Condensed&family=Roboto:wght@300&display=swap" rel="stylesheet"> -->
     <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <section>
-        <div>
-            <div class="contenedorContraseña">
-                <p id="contraseñaGenerada"> </p>
-                    <div class="icon">
-                        <i class="fa-regular fa-copy" class="copiar"></i>
-                        <i class="fa-solid fa-arrow-rotate-right" class="recargar"></i>
-                    </div>
-            </div>
-            
+      <div>
+        <div class="contenedorContraseña">
+          <p id="contraseñaGenerada"></p>
+          <div class="icon">
+            <i class="fa-regular fa-copy" class="copiar"></i>
+            <i class="fa-solid fa-arrow-rotate-right" class="recargar"></i>
+          </div>
         </div>
+      </div>
+      <div>
         <div class="div_contenedor">
-            <div class="titulo">
-                <h1>
-                    Personalice su contraseña
-                </h1>
+          <div class="titulo">
+            <h1>Personalice su contraseña</h1>
+          </div>
+
+          <div class="div_contenedor_b">
+            <div class="div_longitud">
+              <h2>Longitud</h2>
+              <label
+                >6 carácteres
+                <input
+                  type="radio"
+                  value="6"
+                  name="longitud"
+                  class="longitud"
+                  checked
+              /></label>
+              <label
+                >9 carácteres
+                <input type="radio" value="9" name="longitud" class="longitud"
+              /></label>
+              <label
+                >12 carácteres
+                <input type="radio" value="12" name="longitud" class="longitud"
+              /></label>
             </div>
-            
-            <div class="div_contenedor_b">
-                <div class="div_longitud">
-                    <h2> Longitud </h2>
-                    <label>6 carácteres  <input type="radio" value="6" name="longitud" class="longitud" checked></label>
-                    <label>9 carácteres  <input type="radio" value="9" name="longitud" class="longitud"></label>
-                    <label>12 carácteres <input type="radio" value="12" name="longitud" class="longitud" ></label>
-                </div>
-                <div class="div_reglas">
-                    <h2> Reglas</h2>
-                    <label>Sólo letras  <input type="radio" name="reglas" class="inputReglas" id="letras" checked></label>
-                    <label>Sólo números <input type="radio" name="reglas" id="numeros" class="inputReglas" ></label>
-                    <label>Todos los caracteres <input type="radio" name="reglas" id="caracteres" class="inputReglas"></label>
-                </div>
-                <div class="div_caracteres">
-                    <h2>Caracteres</h2>
-                    <label>Mayúsculas <input type="checkbox" id="checkbox-mayusculas"></label>
-                    <label>Minúsculas <input type="checkbox" id="checkbox-minusculas"></label>
-                    <label>Números <input type="checkbox" id="checkbox-numeros" ></label>
-                    <label>Símbolos  <input type="checkbox" id="checkbox-simbolos"></label>
-                </div>
+            <div class="div_reglas">
+              <h2>Reglas</h2>
+              <label
+                >Sólo letras
+                <input
+                  type="radio"
+                  name="reglas"
+                  class="inputReglas"
+                  id="letras"
+                  checked
+              /></label>
+              <label
+                >Sólo números
+                <input
+                  type="radio"
+                  name="reglas"
+                  id="numeros"
+                  class="inputReglas"
+              /></label>
+              <label
+                >Todos los carácteres
+                <input
+                  type="radio"
+                  name="reglas"
+                  id="caracteres"
+                  class="inputReglas"
+              /></label>
             </div>
-        
-            <button id="boton">Generar contraseña</button>
-            
+            <div class="div_caracteres">
+              <h2>Carácteres</h2>
+              <label
+                >Mayúsculas <input type="checkbox" id="checkbox-mayusculas"
+              /></label>
+              <label
+                >Minúsculas <input type="checkbox" id="checkbox-minusculas"
+              /></label>
+              <label
+                >Números <input type="checkbox" id="checkbox-numeros"
+              /></label>
+              <label
+                >Símbolos <input type="checkbox" id="checkbox-simbolos"
+              /></label>
+            </div>
+          </div>
+
+          <button id="boton">Generar contraseña</button>
         </div>
+      </div>
     </section>
     <script src="script/script.js"></script>
-</body>
+  </body>
 </html>

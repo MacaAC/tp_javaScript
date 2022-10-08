@@ -159,7 +159,7 @@ const generarContraseña=(longitudSeleccionada)=> {
             return contraseña
         }  
         else{
-            alert("Seleccione al menos un caracter")
+            alert("Seleccione al menos un carácter")
          } 
         }
     
