@@ -5,7 +5,6 @@ let todo = []
 
 let inputsLongitud = $$(".longitud")//nodeList
 let boton = $("#boton");
-//let inputChequeado = false
 let valorLongitud = 6
 
 
