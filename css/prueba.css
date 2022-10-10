@@ -1,0 +1,237 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color:blueviolet;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 11px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin: 0;
+}
+.contenedorContraseña{
+    height: 4em;
+    width: 25em;
+    background-color: white;
+    border-radius: 1.5em;
+    border: 0.2em solid  transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5em;
+    margin-bottom: 1.25em;
+    
+}
+ #contraseñaGenerada{
+   font-size: 1.8em;
+   height: 2em;
+   width: 10em;
+} 
+.div_contenedor{  
+    margin-top: 1.25em;   
+    height: 48em;
+    width: 25em;
+    display: flex;
+    flex-direction: column;  
+    background-color: white;  
+    border-radius: 1.5em;
+    justify-content: center;
+    align-items: center;
+}
+.titulo{
+    font-size: 1.1em;
+    border-radius: 1.5em;
+    background-color: blueviolet;
+    color: white;
+    height: 3em;
+    width: 20em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2{
+    color:blueviolet;
+}
+.div_contenedor_b{
+    display: flex;
+    flex-direction: column;
+}
+.div_longitud,.div_reglas,.div_caracteres{
+    
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3em;
+    }
+button{
+    background-color: blueviolet;
+    color: white;
+    border-radius: 2em;
+    height: 2em;
+    width: 17em;
+    border: none;
+    font-size: 1.3em;
+    margin-top: 1.5em
+}
+button:hover{
+    box-shadow: 0 0 2em blueviolet;
+}
+.icon{
+margin-right: 1em;
+font-size: 1.5em;
+}
+.fa-solid,.fa-regular{
+background-color: white;
+color: blueviolet;
+
+}
+.fa-solid:hover,.fa-regular:hover{
+text-shadow: 0 0 2em blueviolet;
+
+}
+.longitud:hover{
+text-shadow: 0 0 2em blueviolet;
+
+}
+label{
+display: flex;
+justify-content:space-between
+}
+
+/* Diseño responsive para mobile-landscape */
+@media screen and (min-width:300px) and (max-width:500px) and (orientation:landscape) {
+    body{
+        background-color: red;}
+    .div_contenedor{
+        height: 30em;
+        width: 44em;
+    }
+    .div_contenedor_b{
+        flex-direction: row;    
+    }
+    .div_longitud,.div_reglas,.div_caracteres{
+        margin: 1em;
+    }
+    label{
+        margin: 0.2em;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+/* 
+Diseño responsive para tablet
+ */
+@media screen and (min-width:768px) and (max-width:1024px) and (orientation:portrait){
+body{
+    align-items: center;
+    background-color: yellow  ;
+} 
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo{
+    height: 3.5em;
+    width: 19em;
+    font-size: 1.9em;
+}
+.div_contenedor{
+    margin-top: 2.5em;
+    height: 80em;
+    width: 40em;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.div_contenedor_b{
+    display: flex;
+    justify-content: space-around;
+
+}
+.div_longitud,.div_reglas,.div_caracteres{
+    display: flex;
+    margin: 0.5em;
+    font-size: 2em;    
+}
+.contenedorContraseña{
+    height: 5em;
+    width: 35em;
+}
+button{
+    
+    height: 2em;
+    width: 10em;
+    font-size: 2.5em;
+}
+}
+@media screen and (min-width:768px) and (max-width:1024px) and (orientation:landscape){
+    .div_contenedor{
+        height: 30em;
+        width: 44em;
+    }
+    .div_contenedor_b{
+        flex-direction: row;    
+    }
+    .div_longitud,.div_reglas,.div_caracteres{
+        margin: 1em;
+    }
+    label{
+        margin: 0.2em;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+/* Diseño responsive para desktop */
+
+@media screen and (min-width:1025px){
+    body{
+        align-items: center;
+    }
+    .div_contenedor{
+        margin-top: 3em;
+        height: 40em;
+        width: 60em;
+        border-radius: 2em;
+
+    }
+    .div_contenedor_b{
+        flex-direction: row;
+        justify-content:space-between;
+        width: 50em;
+    }
+    .div_longitud,.div_reglas,.div_caracteres{
+        font-size: 1.5em;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contenedorContraseña{
+        height: 5em;
+        width: 35em;
+    }
+    .titulo, button{
+        font-size: 1.8em;
+        margin: 2em 0;
+    }
+
+
+}
