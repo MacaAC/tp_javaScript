@@ -1,66 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/prueba.css">
-    <link rel="icon" href="imagenes/corazon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Contraseñas</title>
+  <link rel="stylesheet" href="css/prueba.css">
+  <link rel="icon" href="imagenes/corazon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <section>
-        <div>
-            <div class="contenedorContraseña">
-                <p id="contraseñaGenerada"> </p>
-                    <div class="icono">
-                        <i class="fa-regular fa-copy" class="copiar"></i>
-                        <i class="fa-solid fa-arrow-rotate-right" class="recargar"></i>
-                    </div>
-            </div>
+  <section>
+
+    <div>
+      <div class="contenedorContraseña">
+        <p id="contraseñaGenerada"> </p>
+        <div class="icono">
+          <i class="fa-regular fa-copy" class="copiar"></i>
+          <i class="fa-solid fa-arrow-rotate-right" class="recargar"></i>
         </div>
-        <div class="div_contenedor">
-            <h1>
-                Personalice su contraseña
-            </h1>
-            <div class="div_contenedor_b">
-                <div class="div_longitud">
-                    <h2> Longitud </h2>
-                    
-                    <label>6 carácteres <input type="radio" value="6" name="longitud" class="longitud" checked></label>
-                   
-                    <label>9 carácteres  <input type="radio" value="9" name="longitud" class="longitud"></label>
-                   
-                    <label>12 carácteres <input type="radio" value="12" name="longitud" class="longitud" ></label>
-                </div>
-                <div class="div_reglas">
-                    <h2> Reglas</h2>
-                    
-                    <label>Sólo letras <input type="radio" name="reglas" class="inputReglas" id="letras" checked></label>
-                   
-                    <label>Sólo números <input type="radio" name="reglas" id="numeros" class="inputReglas" ></label>
-                    
-                    <label>Todos los caracteres<input type="radio" name="reglas" id="caracteres" class="inputReglas"></label>
-                </div>
-                <div class="div_caracteres">
-                    <h2>Caracteres</h2>
-                    
-                    <label>Mayúsculas<input type="checkbox" id="checkbox-mayusculas"></label>
-                    
-                    <label>Minúsculas<input type="checkbox" id="checkbox-minusculas"></label>
-                   
-                    <label>Números <input type="checkbox" id="checkbox-numeros" ></label>
-                    
-                    <label>Símbolos<input type="checkbox" id="checkbox-simbolos"></label>
-                    
-                </div>
-            </div>
-        
-            <button id="boton">Generar contraseña</button>
-            
+      </div>
+    </div>
+
+    <div>
+      <div class="div_contenedor">
+        <h1>
+          Personalice su contraseña
+        </h1>
+
+        <div class="div_contenedor_b">
+
+          <div class="div_longitud">
+            <h2>Longitud</h2>
+
+            <label>
+              6 Carácteres
+              <input type="radio" value="6" name="longitud" class="longitud" checked>
+            </label>
+
+            <label>
+              9 Carácteres
+              <input type="radio" value="9" name="longitud" class="longitud">
+            </label>
+
+            <label>
+              12 Carácteres
+              <input type="radio" value="12" name="longitud" class="longitud">
+            </label>
+          </div>
+
+          <div class="div_reglas">
+            <h2>Reglas</h2>
+
+            <label>
+              Sólo letras
+              <input type="radio" name="reglas" class="inputReglas" id="letras" checked>
+            </label>
+
+            <label>
+              Sólo números
+              <input type="radio" name="reglas" id="numeros" class="inputReglas">
+            </label>
+
+            <label>
+              Todos los carácteres
+              <input type="radio" name="reglas" id="caracteres" class="inputReglas">
+            </label>
+          </div>
+
+          <div class="div_caracteres">
+            <h2>Carácteres</h2>
+
+            <label>
+              Mayúsculas
+              <input type="checkbox" id="checkbox-mayusculas">
+            </label>
+
+            <label>
+              Minúsculas
+              <input type="checkbox" id="checkbox-minusculas">
+            </label>
+
+            <label>
+              Números
+              <input type="checkbox" id="checkbox-numeros">
+            </label>
+
+            <label>
+              Símbolos
+              <input type="checkbox" id="checkbox-simbolos">
+            </label>
+          </div>
+
         </div>
-    </section>
-    <script src="script/script.js"></script>
+
+        <div class="div_reglas">
+          <h2>Reglas</h2>
+
+          <label>
+            Sólo letras
+            <input type="radio" name="reglas" class="inputReglas" id="letras" checked />
+          </label>
+
+          <label>
+            Sólo números
+            <input type="radio" name="reglas" id="numeros" class="inputReglas" />
+          </label>
+
+          <label>
+            Todos los carácteres
+            <input type="radio" name="reglas" id="caracteres" class="inputReglas" />
+          </label>
+        </div>
+
+        <div class="div_caracteres">
+          <h2>Carácteres</h2>
+          <label>Mayúsculas
+            <input type="checkbox" id="checkbox-mayusculas" />
+          </label>
+
+          <label>Minúsculas
+            <input type="checkbox" id="checkbox-minusculas" />
+          </label>
+
+          <label>Números
+            <input type="checkbox" id="checkbox-numeros" />
+          </label>
+
+          <label>Símbolos
+            <input type="checkbox" id="checkbox-simbolos" />
+          </label>
+        </div>
+
+      </div>
+
+      <button id="boton">Generar contraseña</button>
+    </div>
+  </section>
+
+  <script src="script/script.js"></script>
 </body>
+
 </html>
