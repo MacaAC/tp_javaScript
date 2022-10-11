@@ -1,0 +1,269 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 0;
+  flex-direction: column;
+}
+.contenedorContraseña {
+  height: 3em;
+  width: 25em;
+  background-color: white;
+  border-radius: 1.5em;
+  border: 0.2em solid transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+#contraseñaGenerada {
+  font-size: 1.8em;
+  height: 2em;
+  width: 10em;
+}
+.div_contenedor {
+  margin-top: 1em;
+  height: 45em;
+  width: 25em;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 1.5em;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 1em;
+  border-radius: 1.5em;
+  background-color: blueviolet;
+  color: white;
+  height: 3em;
+  width: 20em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h2 {
+  color: blueviolet;
+}
+.div_contenedor_b {
+  display: flex;
+  flex-direction: column;
+}
+.div_longitud,
+.div_reglas,
+.div_caracteres {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1em;
+  width: 14em;
+}
+button {
+  background-color: blueviolet;
+  color: white;
+  border-radius: 2em;
+  height: 2em;
+  width: 17em;
+  border: none;
+  font-size: 1.3em;
+  margin-top: 1em;
+}
+button:hover {
+  box-shadow: 0 0 2em blueviolet;
+}
+.icono {
+  margin-right: 1em;
+  font-size: 1.5em;
+}
+.fa-solid,
+.fa-regular {
+  background-color: white;
+  color: blueviolet;
+}
+.fa-solid:hover,
+.fa-regular:hover {
+  text-shadow: 0 0 2em blueviolet;
+}
+.longitud:hover {
+  text-shadow: 0 0 2em blueviolet;
+}
+label{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Diseño responsive para mobile-landscape */
+@media screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+  .div_contenedor {
+    height: 20em;
+    width: 44em;
+  }
+  .contenedorContraseña {
+    height: 2.5em;
+    margin-bottom: 0.2em;
+  }
+  h1 {
+    font-size: 1em;
+  }
+  .div_contenedor_b {
+    flex-direction: row;
+    height: 12em;
+  }
+  .div_longitud,
+  .div_reglas,
+  .div_caracteres {
+    margin:0 1em;
+    font-size: 1em;
+    width: 12em;
+  }
+  label {
+    margin: 0.1em;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  button {
+    font-size: 1em;
+    margin: 0;
+  }
+}
+/* 
+Diseño responsive para tablet
+ */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  body {
+    align-items: center;
+    justify-content: center;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    height: 3.5em;
+    width: 19em;
+    font-size: 1.9em;
+  }
+  .div_contenedor {
+    margin-top: 2.5em;
+    height: 80em;
+    width: 40em;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .div_contenedor_b {
+    display: flex;
+    justify-content: space-around;
+  }
+  .div_longitud,
+  .div_reglas,
+  .div_caracteres {
+    display: flex;
+    margin: 0.5em;
+    font-size: 2em;
+  }
+  .contenedorContraseña {
+    height: 5em;
+    width: 35em;
+  }
+  button {
+    height: 2em;
+    width: 10em;
+    font-size: 2.5em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .div_contenedor {
+    height: 35em;
+    width: 60em;
+  }
+  .contenedorContraseña {
+    margin-bottom: 0.5em;
+  }
+  .div_contenedor_b {
+    flex-direction: row;
+    height: 15em;
+    align-items: center;
+  }
+  .div_longitud,
+  .div_reglas,
+  .div_caracteres {
+    margin: 1em;
+  }
+  label {
+    margin: 0.2em;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Diseño responsive para desktop */
+
+@media screen and (min-width: 1025px) {
+  body {
+    align-items: center;
+  }
+  .div_contenedor {
+    margin-top: 3em;
+    height: 50em;
+    width: 60em;
+    border-radius: 2em;
+  }
+  .div_contenedor_b {
+    flex-direction: row;
+    justify-content: center;
+    width: 56em;
+
+    padding: 2em;
+  }
+  .div_caracteres,
+  .div_longitud,
+  .div_reglas {
+    align-items: center;
+    font-size: 1.3em;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contenedorContraseña {
+    height: 5em;
+    width: 35em;
+  }
+
+  button {
+    font-size: 1.7em;
+    margin: 1em 0;
+  }
+  h2 {
+    display: flex;
+    justify-content: flex-start;
+  }
+  h1 {
+    font-size: 1.5em;
+    height: 3em;
+    width: 25em;
+  }
+}
