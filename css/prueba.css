@@ -31,7 +31,7 @@ body {
 }
 .div_contenedor {
   margin-top: 1em;
-  height: 45em;
+  height: 43em;
   width: 25em;
   display: flex;
   flex-direction: column;
@@ -190,7 +190,7 @@ Diseño responsive para tablet
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .div_contenedor {
-    height: 35em;
+    height: 26em;
     width: 60em;
   }
   .contenedorContraseña {
